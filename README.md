@@ -10,7 +10,7 @@ Over its more than 20 years of life, vim has accumulated about 300k lines of sca
 
 Another issue, is that as the only person responsible for maintaing vim's big codebase, Bram Moolenaar has to be extra-careful before accepting patches, because once merged, the new code will be his responsibility.
 
-These problems make it very difficult to have new features and bug fixes merged into the core. Vim just cant keep up with the development speed of its plugin ecosystem.
+These problems make it very difficult to have new features and bug fixes merged into the core. Vim just can't keep up with the development speed of its plugin ecosystem.
 
 ### Solution
 
@@ -19,7 +19,7 @@ Neovim is a project that seeks to aggressively refactor vim source code in order
 - Simplify maintenance to improve the speed that bug fixes and features get merged.
 - Split the work between multiple developers.
 - Enable the implementation of new/modern user interfaces without any modifications to the core source. 
-- Improve the extensibility power with a new plugin architecture based on coprocesses. Plugins will be written in any programming language without any explicit support from the editor.
+- Improve extensibility with a new plugin architecture based on coprocesses. Plugins will be written in any programming language without any explicit support from the editor.
 
 By achieving those goals new developers will soon join the community, consequently improving the editor for all users.
 
@@ -32,7 +32,7 @@ The following topics contain brief explanations of the major changes (and motiva
 * <a href="#platform"><b>Platform-specific code</b></a>
 * <a href="#plugins"><b>New plugin architecture</b></a>
 * <a href="#gui"><b>New GUI architecture</b></a>
-* <a href="#development"><b>Development on github</b></a>
+* <a href="#development"><b>Development on GitHub</b></a>
 
 <a name="build"></a>
 ##### Migrate to a cmake-based build
@@ -88,7 +88,7 @@ plugin -> neovim: {"id": 2, "result": true}}
 
 That shows an hypothetical conversation between neovim and completion plugin that displays completions when the user presses Ctrl+Space. The above scheme gives neovim near limitless extensibility and also improves stability as plugins will automatically be isolated from the main executable. 
 
-This system can also easily emulate the current scripting languages interfaces to vim. For example, a plugin can emulate the python interface by running python scripts sent by vim in its own context and by exposing a 'vim' module with an API matching the current one. Calls to the API would simply be translated to json-rpc messages sent to vim.
+This system can also easily emulate the current scripting languages interfaces to vim. For example, a plugin can emulate the Python interface by running Python scripts sent by vim in its own context and by exposing a 'vim' module with an API matching the current one. Calls to the API would simply be translated to json-rpc messages sent to vim.
 
 
 <a name="gui"></a>
@@ -133,7 +133,7 @@ This new GUI architecture creates many interesting possibilities:
 - Simplified headless testing.
 - Embedding the editor into other programs. In fact, a GUI can be seen as a program that embeds neovim.
 
-Here's a diagram that illustrates how a client-server process tree might look like:
+Here's a diagram that illustrates how a client-server process tree might look:
 
 ```
 Server daemon listening on tcp sockets <------ GUI 1 (attach/detach to running instances using tcp sockets)
@@ -149,7 +149,7 @@ Server daemon listening on tcp sockets <------ GUI 1 (attach/detach to running i
 
 
 <a name="development"></a>
-##### Development on Github
+##### Development on GitHub
 
 Development will happen on the [github organization](https://github.com/neovim), and the code will be split across many repositories, unlike the current vim source tree.
 
@@ -176,7 +176,7 @@ For Ubuntu 12.04:
 
     sudo apt-get install build-essential cmake libncurses5-dev
 
-For OsX:
+For OS X:
 
 * Install [Xcode](https://developer.apple.com/)
 * Install sha1sum
